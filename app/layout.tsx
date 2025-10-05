@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description:
     "Web3 health wallet for patients and families to store lab results and medical PDFs, prove what's needed with zero-knowledge proofs, and share access securely.",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
