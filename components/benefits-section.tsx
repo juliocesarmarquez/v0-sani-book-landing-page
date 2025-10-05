@@ -27,7 +27,7 @@ export function BenefitsSection() {
   ]
 
   return (
-    <section id="benefits" className="relative py-20 md:py-32 overflow-hidden">
+    <section id="benefits" className="relative py-20 overflow-hidden my-[-36px] md:py-[70px]">
       {/* Background Spotlight */}
       <div className="absolute bottom-0 right-1/4 w-96 h-96 spotlight-teal opacity-30" />
 

@@ -10,16 +10,22 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <ProblemSolutionSection />
-      <HowItWorksSection />
-      <BenefitsSection />
-      <FeaturesSection />
-      <CTASection />
-      <FAQSection />
-      <Footer />
+    <main className="min-h-screen modern-bg relative">
+      {/* Subtle grid overlay */}
+      <div className="absolute inset-0 grid-pattern pointer-events-none opacity-40" />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <ProblemSolutionSection />
+        <HowItWorksSection />
+        <BenefitsSection />
+        <FeaturesSection />
+        <CTASection />
+        <FAQSection />
+        <Footer />
+      </div>
     </main>
   )
 }

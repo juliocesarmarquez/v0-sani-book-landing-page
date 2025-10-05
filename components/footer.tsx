@@ -13,7 +13,7 @@ export function Footer() {
           
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-border">
+          <div className="border-border pt-0 border-t-0">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-muted-foreground">© {currentYear} SaniBook, Inc. All rights reserved.</p>
 
@@ -24,9 +24,7 @@ export function Footer() {
                 <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   Terms of Service
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Responsible Disclosure
-                </Link>
+                
               </div>
             </div>
 

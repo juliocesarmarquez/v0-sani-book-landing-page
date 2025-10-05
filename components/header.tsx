@@ -6,6 +6,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,6 +22,11 @@ export function Header() {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault()
+    if (href === "#home") {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+      setIsMobileMenuOpen(false)
+      return
+    }
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" })
@@ -29,6 +35,7 @@ export function Header() {
   }
 
   const navItems = [
+    ...(isScrolled ? [{ label: "Home", href: "#home" }] : []),
     { label: "Benefits", href: "#benefits" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "FAQ", href: "#faq" },
@@ -51,9 +58,7 @@ export function Header() {
         >
           {!isScrolled && (
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0AB6BC] to-[#37AFFF] flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
+              <Image src="/sanibook-logo.png" alt="SaniBook Logo" width={32} height={32} className="w-8 h-8" />
               <span className="text-xl font-bold text-foreground">SaniBook</span>
             </Link>
           )}

@@ -41,7 +41,7 @@ export function FAQSection() {
   ]
 
   return (
-    <section id="faq" className="relative py-20 md:py-32 bg-muted/30 overflow-hidden">
+    <section id="faq" className="relative py-20 bg-muted/30 overflow-hidden md:py-[37px]">
       {/* Background Spotlight */}
       <div className="absolute top-0 right-1/4 w-96 h-96 spotlight-teal opacity-20" />
 
